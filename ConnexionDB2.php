@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
 	try {
-		$conn = new PDO("mysql:host=$host;dbname=$dbname",$dbusername, $dbpassword);
+		$conn = new PDO("mysql:host=$host;port=$port;dbname=$dbname",$dbusername, $dbpassword);
 	} 
 	catch (PDOException $pe)
 	{

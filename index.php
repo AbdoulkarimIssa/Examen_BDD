@@ -27,7 +27,7 @@
 </html>
 
 <?php
-$conn = new mysqli("localhost", "root", "", "sakila");
+$conn = new mysqli("pj1468350-001.eu.clouddb.ovh.net", "Utilisateur", "Azer456123789", "sakila", 35207);
 
 if ($conn->connect_errno) 
 {
