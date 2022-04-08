@@ -1,5 +1,6 @@
 <?php
 
+/***Gestion des ssesions ****/
 $timeout = 300;
 
 // server should keep session data for AT LEAST 1 hour
@@ -24,7 +25,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)
     header("location: Admin.php");
     exit;
 }
- 
+
+/***Gestion de la base de données */
 // Include config file
 require_once "config.php";
  
