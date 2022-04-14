@@ -1,11 +1,10 @@
 <?php
 require_once("model/FilmManager.php");
+ini_set('display_errors', 'On');
 
 function listfilms(){
-    $filmManger = new FilmManager();
-    $films = $filmManger->getfilms();
-    return $films;
-
+    $filmManager = new FilmManager();
+    $films = $filmManager->getfilms();
     require('view/frontend/listeFilmsView.php');
 }
 

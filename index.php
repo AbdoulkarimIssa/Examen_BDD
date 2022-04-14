@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 'On');
 require("controller/frontendController.php");
 
 if (isset($_GET['action'])) {
@@ -9,3 +10,4 @@ if (isset($_GET['action'])) {
 else {
     listfilms();
 }
+//listfilms()

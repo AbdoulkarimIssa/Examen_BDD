@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 'On');
+
 require_once("model/Manager.php");
 
 class FilmManager extends Manager
@@ -7,8 +9,8 @@ class FilmManager extends Manager
         $db = $this->db_connection();
         $sql = "SELECT title, description, length, rental_rate, rating FROM film";
         $result = $db->query($sql);
-        $films = $result->fetch_all(MYSQLI_ASSOC);
-        return $films;
+        //$films = $result->fetch_all(MYSQLI_ASSOC);
+        return $result;
     }
 
 }
