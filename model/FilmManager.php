@@ -7,9 +7,10 @@ class FilmManager extends Manager
 {
     public function getfilms(){
         $db = $this->db_connection();
-        $sql = "SELECT title, description, length, rental_rate, rating FROM film";
+        $sql = "SELECT film_id, title, description, length, rental_rate, rating FROM film LIMIT 30";
         $result = $db->query($sql);
         return $result;
     }
+
 
 }
