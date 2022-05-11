@@ -7,5 +7,15 @@ function listfilms(){
     $films = $filmManager->getfilms();
     require('view/frontend/listeFilmsView.php');
 }
+function FilmByid($id){
+    $filmManager = new FIlmManager();
+    $film = $filmManager->getFilmById($id);
+    require('view/frontend/detailFilm.php');
+}
 
+function filtreByTitle($title){
+    $filmManager = new FilmManager();
+    $films = $filmManager->getfilmByfiltreName($tilte);
+    require('view/frontend/listeFilmsView.php');
+}
 
