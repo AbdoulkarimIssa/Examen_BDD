@@ -96,7 +96,12 @@
                 <div class="col d-flex flex-column position-static">
                     <h3 class="mb-0"><?= $data['title']?></h3>
                     <div class="mb-1 text-muted"><?= $data['description']?></div>
-                    <p class="mb-auto"><?= $data['description']?></p>
+                    <div class="mb-1 text-muted">Acteurs : <?= $data['actors']?></div>
+                    <div class="mb-1 text-muted">Categorie : <?= $data['category']?></div>
+                    <small class="text-muted">Durée : <?= $data['length'] ?> min</small>
+                    <small class="text-muted">Langue  : <?= $data['name'] ?></small>
+                    <small class="text-muted">Date de sortie : <?= $data['release_year'] ?></small>
+                    <small class="text-muted">Evaluation : <?= $data['rating'] ?></small>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
