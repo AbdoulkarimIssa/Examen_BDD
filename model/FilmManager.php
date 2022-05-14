@@ -5,14 +5,26 @@ require_once "model/Manager.php";
 
 class FilmManager extends Manager
 {
-    public function getfilms()
+    public function getlines()
+    {
+        $db = $this->db_connection();
+        $sql = "SELECT count(*) as nbrline
+                FROM `film_list` f 
+                LEFT JOIN film f_t ON f.FID = f_t.film_id 
+                LEFT JOIN language l on l.language_id = f_t.language_id";
+        $result = $db->query($sql);
+        $result = $result->fetch();
+        $result = (int) $result["nbrline"];
+        return $result;
+    }
+    public function getfilms($offset)
     {
         $db = $this->db_connection();
         $sql = "SELECT f.FID, f.title, f.description, f.category, f.price, 
                         f.length, f.rating, f.actors, f_t.release_year,l.name 
                 FROM `film_list` f 
                 LEFT JOIN film f_t ON f.FID = f_t.film_id 
-                LEFT JOIN language l on l.language_id = f_t.language_id LIMIT 30";
+                LEFT JOIN language l on l.language_id = f_t.language_id LIMIT 39 OFFSET $offset";
         $result = $db->query($sql);
         return $result;
     }

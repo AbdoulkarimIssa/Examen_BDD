@@ -4,12 +4,17 @@ require "controller/frontendController.php";
 
 if (isset($_GET["action"])) {
     if ($_GET["action"] == "listFilms") {
-        listfilms();
+        if(isset($_GET["index"])){
+            $index = (int)$_GET["index"];
+            listfilms($index*30);
+        }else
+        listfilms(0);
     }
 
     if ($_GET["action"] == "FilmById") {
         FilmByid($_GET["id"]);
     }
+
 }
 elseif (isset($_POST['search']) && $_POST['search'] > 2) {
     if ($_POST['filtre']=='title') {
@@ -25,6 +30,6 @@ elseif (isset($_POST['search']) && $_POST['search'] > 2) {
     }
 }
 else {
-    listfilms();
+    listfilms(0);
     //filtreByTitle('BOUND');
 }

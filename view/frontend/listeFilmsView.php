@@ -121,7 +121,16 @@
 		</div>
 		<div class="container">
 			<ul class="pagination">
-			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<?php
+			for ($i=0; $i < $pagination_index; $i++) { 
+
+			?> 
+				<li class="page-item">
+					<a class="page-link" href="index.php?action=listFilms&index=<?= $i ?>"> <?= $i+1 ?> </a>
+				</li>
+			<?php
+			}
+			?>
 			</ul> 
 		</div>
 
