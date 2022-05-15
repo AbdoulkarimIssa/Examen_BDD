@@ -58,32 +58,41 @@
     <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
   </symbol>
 </svg>
-    <header class="p-3 bg-dark text-white">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-                </a>
-
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">A propos</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">A propos</a></li>
-                </ul>
-
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                    <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-                </form>
-
-                <div class="text-end">
-                    <button type="button" class="btn btn-outline-light me-2">Login</button>
-                    <button type="button" class="btn btn-warning">Sign-up</button>
-                </div>
-            </div>
-        </div>
-    </header>
+<header class="p-3 bg-dark text-white">
+		<div class="container">
+			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+				<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+					<svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+						<use xlink:href="#" />
+					</svg>
+				</a>
+				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+					<li><a href="#" class="nav-link px-2 text-white">Issa Mohamed</a></li>
+					<li><a href="#" class="nav-link px-2 text-white">Jonathan</a></li>
+					<li><a href="#" class="nav-link px-2 text-white">DE 2</a></li>
+					<li><a href="#" class="nav-link px-2 text-white">Télécom Saint-etienne</a></li>
+				</ul>
+				<!-- debut bare de recherche ---->
+				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="index.php" method="POST">
+					<input  name="oCategorieValeur" type="hidden" value="0" />
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<select class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="filtre">
+								<option value="actors">Acteur</option>
+								<option value="category">Categorie</option>
+								<option value="title">Titre</option>
+							</select>
+						</div>
+						<input  type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search" name="search"> </div>
+				</form>
+				<!-- fin bare de recherche-->
+				<div class="text-end">
+					<button type="button" class="btn btn-outline-light me-2">Login</button>
+					<button type="button" class="btn btn-warning">Sign-up</button>
+				</div>
+			</div>
+		</div>
+	</header>
     <!-- End header -->
 
 <?php
