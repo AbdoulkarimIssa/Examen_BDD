@@ -5,7 +5,7 @@ require_once "model/Manager.php";
 
 class FilmManager extends Manager
 {
-    public function getlines()
+    public function getlines()//obtenir le nombre film total afin de gérer la pagination
     {
         $db = $this->db_connection();
         $sql = "SELECT count(*) as nbrline

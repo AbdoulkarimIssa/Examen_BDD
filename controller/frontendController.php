@@ -2,6 +2,7 @@
 require_once "model/FilmManager.php";
 ini_set("display_errors", "On");
 
+//Cette fonction retourne la liste des films en tenant compte de l'offset
 function listfilms($offset)
 {
     $filmManager = new FilmManager();
@@ -9,17 +10,17 @@ function listfilms($offset)
     //$lignes = $films->rowCount();//nombre de ligne
     $lignes = $filmManager->getlines();
     $pagination_index = round($lignes/30);
-    require "view/frontend/listeFilmsView.php";
+    require "view/frontend/listeFilmsView.php";// page d'affichage des films
 }
+//Cette fonction retourne un film specifique demandé par l'utilisateur
 function FilmByid($id)
 {
     $filmManager = new FIlmManager();
     $film = $filmManager->getFilmById($id);
-    require "view/frontend/detailFilm.php";
+    require "view/frontend/detailFilm.php";//detail d'un film
 }
 
-// lors de l'implementation du filtre, n'oublie pas d'ajouter un identifiant dans la focntion filtre
-// pour savoir queltype de filtre il veut mettre en place.
+// fonction d'affichage des films en tenant comptes des filtres
 function filtreByTitle($title)
 {
     $filmManager = new FilmManager();

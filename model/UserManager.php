@@ -1,6 +1,6 @@
 <?php
 require_once("model/Manager");
-
+//Gestion des utilisateurs
 class UserManager extends Manager
 {
     public function getuser($user){

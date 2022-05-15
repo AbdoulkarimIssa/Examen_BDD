@@ -6,7 +6,7 @@ class Manager
     private $dbusername = "Utilisateur";
     private $dbpassword = "Azer456123789";
     private $port = "35207";
-
+// A chaque fois que j'utilise les nom des variables rien ne fonctionne. J'ai fini par mettre en dure les variables
     protected function db_connection()
     {
         try {
